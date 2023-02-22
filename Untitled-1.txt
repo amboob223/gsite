@@ -1,0 +1,3 @@
+main thing to remember in booststrap is that there are classes to do certain tings
+like to change color has its own clas bg-primary etc. and text-light
+to change marging has its own class that yuo use instile in the html the margin class looks like m-{size}
