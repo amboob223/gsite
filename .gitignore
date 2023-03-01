@@ -1,0 +1,6 @@
+package-lock.json
+node-module/*
+./idea
+
+
+images/*
