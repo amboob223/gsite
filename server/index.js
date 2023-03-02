@@ -8,6 +8,11 @@ const pool = require("./db") // because this is whats being exported form module
 app.use(cors());
 app.use(express.json());
 
+app.use((req, res, next) => {
+  res.setHeader('Access-Control-Allow-Origin', 'https://regalsouls.netlify.app/bookings.html');
+  next();
+});
+
 //submitting the data
 app.post("/gericka", async (req, res) => {
     try {
