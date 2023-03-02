@@ -9,9 +9,9 @@ app.use(cors());
 app.use(express.json());
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', 'https://regalsouls.netlify.app/bookings.html');
-  next();
-});
+    res.setHeader('Access-Control-Allow-Origin', 'https://regalsouls.netlify.app');
+    next();
+}); // what is set Heahder and why access-allow origin
 
 //submitting the data
 app.post("/gericka", async (req, res) => {
