@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const pool = require("./db") // because this is whats being exported form module.exports on the otyher page
+const pool = require("./db"); // because this is whats being exported form module.exports on the otyher page
 
 
     //middleware is needed or we will get an error
