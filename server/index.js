@@ -4,14 +4,16 @@ const cors = require("cors");
 const pool = require("./db"); // because this is whats being exported form module.exports on the otyher page
 
 
-//middleware is needed or we will get an error
-app.use(cors());
-app.use(express.json());
 
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', 'https://regalsouls.netlify.app');
     next();
-}); // what is set Heahder and why access-allow origin
+});
+//middleware is needed or we will get an error
+app.use(cors());
+app.use(express.json());
+
+// what is set Heahder and why access-allow origin
 
 
 pool.query(`
