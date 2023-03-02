@@ -13,9 +13,6 @@ app.use((req, res, next) => {
     next();
 }); // what is set Heahder and why access-allow origin
 
-pool.query(`
-CREATE DATABASE gsite;
-`);
 
 pool.query(`
 
