@@ -1,0 +1,138 @@
+#daddy {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #D4AF37, #C8A048, #B6984D);
+    text-align: center;
+}
+
+.nav-link {
+    color: black;
+}
+
+#ting {
+    display: grid;
+    justify-content: center;
+}
+
+#ting>div {
+    margin: 2px
+}
+
+.con {
+    display: flex;
+    justify-content: center;
+}
+
+div>h1 {
+    text-align: center;
+}
+
+div>h3 {
+    text-align: center;
+}
+
+#dad {
+    display: flex;
+    justify-content: center;
+}
+
+.font {
+    color: #D4AF37;
+}
+
+.intro {
+
+    width: 50%;
+}
+
+.words {
+    display: flex;
+    justify-content: center;
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+}
+
+.btnc {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+}
+
+
+.timg {
+    height: 200px;
+    width: 200px;
+}
+
+footer {
+    margin-top: 15%;
+}
+
+
+/* #back {
+    background-color: black;
+}
+
+#navi {
+    background-color: #ae8704;
+    background-image: linear-gradient(to bottom, #D4AF37, #F9DC5C);
+}
+
+#nav {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+.navbar-nav>nav-item {
+    display: flex;
+    justify-content: center;
+}
+
+ul {
+    list-style: none;
+}
+
+.whole {
+    display: flex;
+    justify-content: center;
+}
+
+.full>h3 {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.full {
+    text-align: center;
+}
+
+.whole>.btn {
+    display: block;
+}
+
+.you {
+    display: flex;
+    justify-content: center;
+}
+
+.gold {
+    color: #ae8704;
+}
+
+.nav-link {
+    color: black;
+}
+
+#b76e79 */
