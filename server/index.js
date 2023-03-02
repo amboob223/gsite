@@ -13,6 +13,23 @@ app.use((req, res, next) => {
     next();
 }); // what is set Heahder and why access-allow origin
 
+pool.query(`
+CREATE DATABASE gsite;
+`);
+
+pool.query(`
+
+CREATE TABLE readings(
+    id SERIAL PRIMARY KEY,
+    first VARCHAR(255),
+    last VARCHAR(255),
+    phone VARCHAR(255),
+    email VARCHAR (255),
+    birthdate VARCHAR (255),
+    target VARCHAR(255)
+);
+`);
+
 //submitting the data
 app.post("/gericka", async (req, res) => {
     try {
@@ -32,7 +49,7 @@ app.post("/gericka", async (req, res) => {
 
         res.json(
             newInfo.rows
-            // radio: radio.rows
+
         )// this is what we sending back to the browser
 
     } catch (error) {

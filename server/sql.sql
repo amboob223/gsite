@@ -14,7 +14,7 @@ ALTER TABLE readings ALTER COLUMN love TYPE BOOLEAN USING love::boolean;
 
 
 
-REATE DATABASE gsite;
+CREATE DATABASE gsite;
 
 CREATE TABLE readings(
     id SERIAL PRIMARY KEY,
