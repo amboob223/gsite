@@ -27,7 +27,7 @@ button.addEventListener("click", async () => {
             love: love.checked
         }
 
-        const response = await fetch("https://gsite-0hlj.onrender.com/gericka",
+        const response = await fetch("https://gsite-0hlj.onrender.com",
             {
                 method: "POST",
                 headers: { "Content-type": "application/json" }, // this is to tell the browseres that its going to ressive json dats
