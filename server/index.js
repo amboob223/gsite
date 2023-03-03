@@ -18,7 +18,7 @@ app.use(express.json());
 
 
 //submitting the data
-app.post("/gericka", async (req, res) => {
+app.post("/", async (req, res) => {
     try {
         const { first, last, birthdate, phone, target, email, money, love, other } = req.body // we decontructed the body object in the cleint
         const newInfo = await pool.query(
