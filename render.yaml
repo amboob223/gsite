@@ -1,3 +1,10 @@
-routes:
-  - path: /gericka
-    internal: true
+version: 1
+services:
+  - name: web
+    buildCommand: npm run build
+    startCommand: npm run start
+    env:
+      NODE_ENV: production
+    routes:
+      - path: /gericka
+        internal: true
