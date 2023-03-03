@@ -1,7 +1,7 @@
 version: 1
-
 services:
-  - name: gsite
+  - type: web
+    name: gsite
     buildCommand: npm install && npm build
     startCommand: node server/index.js
     env:
@@ -10,3 +10,4 @@ services:
       - path: /gericka
         methods: ["POST"]
         internal: true
+
