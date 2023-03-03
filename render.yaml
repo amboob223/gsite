@@ -8,7 +8,7 @@ services:
       password: fEUGYADX1ubCrYP5dB2bXtBlyTDiTioD
   - name: web
     github:
-      branch: main
+      branch: master
     buildCommand: "npm install && npm build"
     startCommand: "node server/index.js"
     env:
