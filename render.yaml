@@ -1,13 +1,26 @@
-version: 1
 services:
-  - type: web
-    name: gsite
-    buildCommand: npm install && npm build
-    startCommand: node server/index.js
+  - name: database
+    plan: postgres
+    config:
+      version: "15"
+      hostname: smokehost
+      username: gsite_user
+      password: fEUGYADX1ubCrYP5dB2bXtBlyTDiTioD
+  - name: web
+    github:
+      branch: main
+    buildCommand: "npm install && npm build"
+    startCommand: "node server/index.js"
     env:
-      NODE_ENV: production
-    routes:
-      - path: /gericka
-        methods: ["POST"]
-        internal: true
-
+      DATABASE_URL: "postgres://gsite_user:fEUGYADX1ubCrYP5dB2bXtBlyTDiTioD@smokehost:5432/gsite_user"
+  - name: api
+    dockerfile: Dockerfile
+    env:
+      DATABASE_URL: "postgres://gsite_user:fEUGYADX1ubCrYP5dB2bXtBlyTDiTioD@smokehost:5432/gsite_user"
+routes:
+  - path: gericka
+    service: web
+    methods: ["GET"]
+  - path: /api
+    service: api
+    methods: ["POST"]
