@@ -20,7 +20,5 @@ services:
 routes:
   - path: gericka
     service: web
-    methods: ["GET"]
-  - path: /api
-    service: api
     methods: ["POST"]
+ 
