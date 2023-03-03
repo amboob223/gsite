@@ -1,3 +1,10 @@
 package-lock.json
 node-module
 .env
+
+# // host: "dpg-cg05gat269vdqrfpj2g0-a",
+# // database:"gsite",
+# // user:"gsite_user",
+# // password:"fEUGYADX1ubCrYP5dB2bXtBlyTDiTioD"
+# # // port:5432
+# ✗ psql -h "dpg-cg05gat269vdqrfpj2g0-a" -p 5432 -U "gsite_user" -d "gsite"
