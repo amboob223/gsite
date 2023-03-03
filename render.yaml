@@ -1,10 +1,12 @@
 version: 1
+
 services:
-  - name: web
-    buildCommand: npm run build
-    startCommand: npm run start
+  - name: my-app
+    buildCommand: npm install && npm build
+    startCommand: node server/index.js
     env:
       NODE_ENV: production
     routes:
       - path: /gericka
+        methods: ["POST"]
         internal: true
