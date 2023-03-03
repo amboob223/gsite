@@ -1,7 +1,7 @@
 version: 1
 
 services:
-  - name: my-app
+  - name: gsite
     buildCommand: npm install && npm build
     startCommand: node server/index.js
     env:
