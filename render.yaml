@@ -1,6 +1,6 @@
 services:
-  - name: database
-    type: postgres
+  - name: gsite
+    type: unknown
     config:
       version: "15"
       hostname: smokehost
