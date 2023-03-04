@@ -1,20 +1,28 @@
 services:
-  - name: gsite
+  - name: gericka-db
     type: postgres
+    plan: postgresql-dev
     config:
       version: "15"
-      hostname: smokehost
-      username: gsite_user
-      password: fEUGYADX1ubCrYP5dB2bXtBlyTDiTioD
-  - name: web
+      hostname: localhost
+      port: 5432
+      database: gericka
+      username: playabook
+      password: 8896
+    env:
+      DATABASE_URL: postgres://playabook:8896@localhost:5432/gericka
+
+  - name: gericka-web
     type: node
-    github:
+    source:
+      type: github
       branch: master
     buildCommand: "npm install && npm build"
-    startCommand: "node server/index.js"
+    startCommand: "npm start"
     env:
-      DATABASE_URL: "postgres://gsite_user:fEUGYADX1ubCrYP5dB2bXtBlyTDiTioD@smokehost:5432/gsite_user"
+      DATABASE_URL: postgres://playabook:8896@localhost:5432/gericka
+
 routes:
-  - path: gericka
-    service: web
+  - path: /gericka
     methods: ["POST"]
+    service: gericka-db
