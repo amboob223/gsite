@@ -1,0 +1,26 @@
+services:
+  - name: gsite
+    type: unknown
+    config:
+      version: "15"
+      hostname: smokehost
+      username: gsite_user
+      password: fEUGYADX1ubCrYP5dB2bXtBlyTDiTioD
+  - name: web
+    type: node
+    github:
+      branch: master
+    buildCommand: "npm install && npm build"
+    startCommand: "node server/index.js"
+    env:
+      DATABASE_URL: "postgres://gsite_user:fEUGYADX1ubCrYP5dB2bXtBlyTDiTioD@smokehost:5432/gsite_user"
+  - name: api
+    type: docker
+    dockerfile: Dockerfile
+    env:
+      DATABASE_URL: "postgres://gsite_user:fEUGYADX1ubCrYP5dB2bXtBlyTDiTioD@smokehost:5432/gsite_user"
+
+routes:
+  - path: gericka
+    service: web
+    methods: ["POST"]
