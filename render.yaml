@@ -1,6 +1,5 @@
 services:
   - name: gsite
-    type: unknown
     config:
       version: "15"
       hostname: smokehost
