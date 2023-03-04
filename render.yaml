@@ -1,5 +1,5 @@
 services:
-  - name: gericka-db
+  - name: gericka
     type: postgres
     plan: postgresql-dev
     config:
@@ -12,7 +12,7 @@ services:
     env:
       DATABASE_URL: postgres://playabook:8896@localhost:5432/gericka
 
-  - name: gericka-web
+  - name: gericka
     type: node
     source:
       type: github

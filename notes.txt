@@ -1,1 +1,5 @@
 at 25:50 is when he talks about connectiuon string iand  the 
+
+"postgres://gsite_user:fEUGYADX1ubCrYP5dB2bXtBlyTDiTioD@smokehost:5432/gsite_user"
+"postgres://gsite_user:fEUGYADX1ubCrYP5dB2bXtBlyTDiTioD@dpg-cg05gat269vdqrfpj2g0-a/gsite"
+postgres://playabook:8896@localhost:5432/gericka
