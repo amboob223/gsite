@@ -1,6 +1,6 @@
 services:
   - name: gsite
-    type: postgres
+    type: "postgres"
     config:
       version: "15"
       hostname: smokehost
